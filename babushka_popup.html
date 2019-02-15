@@ -486,9 +486,18 @@
                          </div>`;
 
                     destination.insertAdjacentHTML("beforeend", template);
-                    destination.lastElementChild.addEventListener("click", visSingle);
+                    destination.lastElementChild.addEventListener("click",()=>{ 
+                        visSingle(ret);
+                    });
 
-                    function visSingle() {
+         
+
+
+                }
+            });
+
+        }
+           function visSingle(ret) {
                         document.querySelector("#indhold").innerHTML = `
                                     <div class="enkelt">
 
@@ -511,13 +520,6 @@
                             visRetter();
                         }
                     }
-
-
-                }
-            });
-
-        }
-
 
 
 
